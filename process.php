@@ -1,7 +1,7 @@
 <?php
 
 
-if($isset($_GET['search'])){
+if(isset($_GET['search'])){
 $search=$_GET['search'];
 }else if(isset($_POST['search'])){$search=$_POST['search'];}else{
 $search='';}
