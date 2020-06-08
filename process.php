@@ -1,6 +1,10 @@
 <?php
 
 $search=$_POST['search'];
+if($isset($_GET['search'])){
+$search=$_GET['search'];
+}else if(isset($_POST['search])){$search=$_POST['search'];}else{
+$search='';}
 $url = 'https://www.imdb.com/find?q='.$search.'&s=tt&ttype=ft&ref_=fn_ft';
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
